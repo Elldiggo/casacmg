@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia Dos Namorados</title>
+
+    <style>
+        body {
+            background-color: rgb(28, 111, 219);
+        }
+
+        .painel {
+            margin: auto;
+            background-color: rgb(138, 197, 212, 0.8);  
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #sim {
+            height: 40px;
+            width: 70px;
+            background-color: red;
+            font-size: 15px;
+            font-weight: bold;
+            border: 1px solid white;
+            filter: drop-shadow(0 0 3px rgb(255, 255, 255));
+            border-radius: 10px;
+            color: white;
+            margin-left: -50px;
+            transition: 0.4s;
+        }
+
+        #sim:hover {
+            background-color: rgb(0, 255, 170);
+            transition: 0.4s;
+        }
+
+        #nao {
+            position: absolute;
+            height: 40px;
+            width: 70px;
+            background-color: red;
+            font-size: 15px;
+            font-weight: bold;
+            border: 1px solid white;
+            filter: drop-shadow(0 0 3px rgb(255, 255, 255));
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .gif {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: drop-shadow(0 0 2px rgb(97, 115, 116));
+        }
+
+       
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="painel">
+        <h1> Agradeço por tudo, tafada</h1>
+
+        <div class="gif">
+            <div class="tenor-gif-embed" data-postid="9406698208260770694" data-share-method="host"
+                data-aspect-ratio="1.0375" data-width="40%">
+            </div>
+            <script class="gif_fofo" type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+        </div>
+
+        <h2>Aceita Casar comigo? </h2>
+
+
+        <a href="https://youtu.be/mOC3RoERdxs?si=SjmtjceghSbIzJyK"><button id="sim"> Sim! </button></a>
+        <button onmouseover="fuja()" id="nao"> Não! </button>
+
+    </div>
+
+    <script>
+        function fuja() {
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
